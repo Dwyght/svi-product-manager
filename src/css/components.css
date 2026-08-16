@@ -278,25 +278,7 @@ highlight when hovered.
 }
 
 .delete-confirm-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.delete-confirm-icon {
-  display: flex;
-  flex: 0 0 44px;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #fee2e2;
-}
-
-.delete-confirm-icon img {
-  width: 21px;
-  height: 21px;
+  display: block;
 }
 
 .delete-confirm-copy h2 {

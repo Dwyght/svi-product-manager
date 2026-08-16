@@ -14,8 +14,6 @@ export class DeleteConfirmModal {
     this.overlay = document.createElement("div");
     this.modal = document.createElement("section");
     this.content = document.createElement("div");
-    this.iconContainer = document.createElement("div");
-    this.icon = document.createElement("img");
     this.copy = document.createElement("div");
     this.title = document.createElement("h2");
     this.message = document.createElement("p");
@@ -34,7 +32,6 @@ export class DeleteConfirmModal {
     this.overlay.classList.add("modal-overlay");
     this.modal.classList.add("modal", "delete-confirm-modal");
     this.content.classList.add("delete-confirm-content");
-    this.iconContainer.classList.add("delete-confirm-icon");
     this.copy.classList.add("delete-confirm-copy");
     this.actions.classList.add("modal-actions");
     this.modal.setAttribute("role", "alertdialog");
@@ -44,15 +41,11 @@ export class DeleteConfirmModal {
     this.title.id = "delete-confirm-title";
     this.title.textContent = "Delete product?";
     this.message.id = "delete-confirm-message";
-    this.icon.src = new URL("../../assets/icons/trash.svg", import.meta.url)
-      .href;
-    this.icon.alt = "";
   }
 
   appendElements() {
-    this.iconContainer.append(this.icon);
     this.copy.append(this.title, this.message);
-    this.content.append(this.iconContainer, this.copy);
+    this.content.append(this.copy);
     this.actions.append(
       this.cancelButton.getElement(),
       this.deleteButton.getElement(),

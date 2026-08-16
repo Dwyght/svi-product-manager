@@ -76,7 +76,7 @@ export class ProductFormModal {
     this.descriptionLabel.textContent = "Description";
     this.descriptionInput.placeholder = "Description";
     this.descriptionInput.required = true;
-    this.uploadLabel.textContent = "Upload Image (Bonus)";
+    this.uploadLabel.textContent = "Upload Image";
     this.fileInput.type = "file";
     this.fileInput.accept = "image/*";
     this.preview.classList.add("image-preview");

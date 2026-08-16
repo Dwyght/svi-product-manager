@@ -7,7 +7,6 @@ const CURRENT_USER_KEY = "activity3_current_user";
 
 export function getUsers() {
   const users = localStorage.getItem(USERS_KEY);
-
   if (!users) {
     return [];
   }
@@ -21,15 +20,12 @@ export function saveUsers(users) {
 
 export function addUser(user) {
   const users = getUsers();
-
   users.push(user);
-
   saveUsers(users);
 }
 
 export function findUser(username) {
   const users = getUsers();
-
   return users.find(
     (user) => user.username.toLowerCase() === username.toLowerCase(),
   );
@@ -45,7 +41,6 @@ export function setCurrentUser(user) {
 
 export function getCurrentUser() {
   const user = localStorage.getItem(CURRENT_USER_KEY);
-
   if (!user) {
     return null;
   }

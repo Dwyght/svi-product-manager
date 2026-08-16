@@ -3,9 +3,7 @@ import { RegisterPage } from "./pages/RegisterPage.js";
 import { ProductsPage } from "./pages/ProductsPage.js";
 
 import { AuthService } from "./services/AuthService.js";
-
 const app = document.getElementById("app");
-
 function showPage(page) {
   app.replaceChildren();
   page.render(app);
@@ -16,12 +14,10 @@ function showLogin() {
     onLoginSuccess: () => {
       showProducts();
     },
-
     onRegister: () => {
       showRegister();
     },
   });
-
   showPage(loginPage);
 }
 
@@ -30,12 +26,10 @@ function showRegister() {
     onRegistrationSuccess: () => {
       showLogin();
     },
-
     onBackToLogin: () => {
       showLogin();
     },
   });
-
   showPage(registerPage);
 }
 
@@ -46,13 +40,11 @@ function showProducts() {
       showLogin();
     },
   });
-
   showPage(productsPage);
 }
 
 function start() {
   const currentUser = AuthService.getCurrentUser();
-
   if (currentUser) {
     showProducts();
   } else {

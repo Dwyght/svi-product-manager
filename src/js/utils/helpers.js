@@ -15,22 +15,18 @@ export function getProductImage(product) {
 
 export function formatPrice(price) {
   const number = Number(price);
-
   return `$${number.toFixed(2)}`;
 }
 
 export function fileToDataUrl(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
-
     reader.onload = () => {
       resolve(reader.result);
     };
-
     reader.onerror = () => {
       reject(new Error("Unable to read image."));
     };
-
     reader.readAsDataURL(file);
   });
 }

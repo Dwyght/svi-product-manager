@@ -9,19 +9,16 @@ import {
 export class AuthService {
   static register(user) {
     const existingUser = findUser(user.username);
-
     if (existingUser) {
       throw new Error("Username already exists.");
     }
 
     addUser(user);
-
     return user;
   }
 
   static login(username, password) {
     const user = findUser(username);
-
     if (!user) {
       throw new Error("Username does not exist.");
     }
@@ -39,9 +36,7 @@ export class AuthService {
     const currentUser = {
       username: user.username,
     };
-
     setCurrentUser(currentUser);
-
     return currentUser;
   }
 

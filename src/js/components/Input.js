@@ -26,7 +26,6 @@ export class Input {
     this.container = document.createElement("div");
     this.label = document.createElement("label");
     this.input = document.createElement("input");
-
     if (this.icon) {
       this.inputControl = document.createElement("div");
       this.iconElement = document.createElement("img");
@@ -39,7 +38,6 @@ export class Input {
     this.input.type = this.type;
     this.input.placeholder = this.placeholder;
     this.input.required = this.required;
-
     if (this.icon) {
       this.inputControl.classList.add("input-control");
       this.iconElement.src = this.icon;

@@ -1,21 +1,15 @@
 export class Button {
   constructor({ text, type = "button", className = "", icon = "" }) {
     this.text = text;
-
     this.type = type;
-
     this.className = className;
-
     this.icon = icon;
-
     this.initializeElements();
-
     this.setAttributes();
   }
 
   initializeElements() {
     this.button = document.createElement("button");
-
     if (this.icon) {
       this.iconElement = document.createElement("img");
       this.textElement = document.createElement("span");
@@ -24,7 +18,6 @@ export class Button {
 
   setAttributes() {
     this.button.type = this.type;
-
     if (this.icon) {
       this.iconElement.src = this.icon;
       this.iconElement.alt = "";
@@ -37,7 +30,6 @@ export class Button {
 
     if (this.className) {
       const classes = this.className.split(" ");
-
       this.button.classList.add(...classes);
     }
   }

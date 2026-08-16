@@ -107,7 +107,7 @@ export class LoginPage {
 
     this.title.textContent = "Login";
 
-    this.subtitle.textContent = "Authenticate to access secure resources.";
+    this.subtitle.textContent = "Login to manage your products.";
 
     this.form.classList.add("auth-form");
 

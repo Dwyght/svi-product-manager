@@ -1,7 +1,7 @@
 :root {
   --primary: #1976D3;
 
-  --primary-hover: #1d4ed8;
+  --primary-hover: #196cc0 ;
 
   --background: #f5f7fa;
 
@@ -13,7 +13,7 @@
 
   --border: #e5e7eb;
 
-  --danger: #ff3030;
+  --danger: #DC3545;
 
   --success: #15803d;
 }

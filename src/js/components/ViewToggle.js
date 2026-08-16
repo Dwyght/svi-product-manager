@@ -21,13 +21,15 @@ export class ViewToggle {
     this.container = document.createElement("div");
 
     this.cardButton = new Button({
-      text: "Cards",
+      text: "",
       className: "view-toggle-button",
+      icon: new URL("../../assets/icons/grid.svg", import.meta.url).href,
     });
 
     this.listButton = new Button({
-      text: "List",
+      text: "",
       className: "view-toggle-button",
+      icon: new URL("../../assets/icons/list.svg", import.meta.url).href,
     });
   }
 
@@ -40,9 +42,13 @@ export class ViewToggle {
       .getElement()
       .setAttribute("aria-label", "Show products as cards");
 
+    this.cardButton.getElement().title = "Grid view";
+
     this.listButton
       .getElement()
       .setAttribute("aria-label", "Show products as a list");
+
+    this.listButton.getElement().title = "List view";
   }
 
   appendElements() {

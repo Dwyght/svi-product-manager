@@ -382,19 +382,45 @@ highlight when hovered.
 
   border: 1px solid var(--border);
 
-  border-radius: 6px;
+  border-radius: 10px;
 
   background: var(--surface);
 }
 
 .view-toggle-button {
-  padding: 9px 14px;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 42px;
+
+  height: 40px;
+
+  padding: 9px;
 
   border: none;
 
   background: var(--surface);
 
   color: var(--text);
+}
+
+.view-toggle-button:first-child {
+  border-radius: 9px 0 0 9px;
+}
+
+.view-toggle-button:last-child {
+  border-radius: 0 9px 9px 0;
+}
+
+.view-toggle-button .button-icon {
+  width: 20px;
+
+  height: 20px;
+
+  pointer-events: none;
 }
 
 .view-toggle-button + .view-toggle-button {
@@ -409,6 +435,10 @@ highlight when hovered.
   background: var(--primary);
 
   color: white;
+}
+
+.view-toggle-button.active .button-icon {
+  filter: brightness(0) invert(1);
 }
 
 .view-toggle-button.active:hover {
